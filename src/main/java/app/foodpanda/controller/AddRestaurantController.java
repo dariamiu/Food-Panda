@@ -1,12 +1,13 @@
 package app.foodpanda.controller;
 
-
-import app.foodpanda.model.*;
+import app.foodpanda.dto.RestaurantDTO;
+import app.foodpanda.dto.ZoneDTO;
 import app.foodpanda.service.RestaurantService;
 import app.foodpanda.service.ZoneService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.HashMap;
 import java.util.List;
 
@@ -20,15 +21,17 @@ public class AddRestaurantController {
     @Autowired
     ZoneService zoneService;
 
-   @PostMapping("/restaurants/add")
+    Logger logger = LoggerFactory.getLogger(AddRestaurantController.class);
+
+    @PostMapping("/restaurants/add")
     HashMap<String, Object> addRestaurant(@RequestBody RestaurantDTO restaurant){
-        System.out.println("restaurant added");
+        logger.info("Executing the post request for adding restaurant");
         return restaurantService.addRestaurant(restaurant);
     }
 
     @GetMapping("/zones")
     List<ZoneDTO> getZones(){
-        System.out.println("got zones");
+        logger.info("Executing the get request for getting the zones");
         return zoneService.findAll();
     }
 

@@ -12,7 +12,6 @@ const Zone = (zone) => {
      </div>
     )
     
-
 }
 
 export default Zone

@@ -96,6 +96,31 @@ img {
   border-radius: 5px;
 }
 
+.container-cart-1 {
+  max-width: 1400px;
+  max-height: 500px;
+  margin: 30px auto;
+  overflow: auto;
+  height: 600px;
+  border: 1px solid rgb(85, 29, 71);
+  padding: 30px;
+  border-radius: 5px;
+}
+.hide {    
+  display:none;
+}
+
+.container-cart-2 {
+  max-width: 1400px;
+  max-height: 300px;
+  margin: 30px auto;
+  overflow: auto;
+  height: 600px;
+  border: 1px solid rgb(85, 29, 71);
+  padding: 30px;
+  border-radius: 5px;
+}
+
 .container-foods {
   max-width: 1400px;
   margin: 30px auto;

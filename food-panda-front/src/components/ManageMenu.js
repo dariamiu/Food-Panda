@@ -98,44 +98,44 @@ const ManageMenu = () =>{
     return(
 
         <div>
-        <div className = "row">
-        <div style={{color: '#800040', marginLeft : 50, fontSize : 50}}>FoodPanda</div>
-        <button className = "btn" style = {{marginLeft : 1000}} type="submit" id='btn-log-out' onClick={(e) => onLogOutSubmit(e)}>
-            Log out
-        </button>
-        </div>
-        <hr></hr>
+            <div className = "row">
+                <div style={{color: '#800040', marginLeft : 50, fontSize : 50}}>FoodPanda</div>
+                <button className = "btn" style = {{marginLeft : 1000}} type="submit" id='btn-log-out' onClick={(e) => onLogOutSubmit(e)}>
+                    Log out
+                </button>
+                </div>
+                <hr></hr>
 
-        <div className='containerWithBorder'>
-		<h1 className='coloredLoginTitle'>Add Food</h1>
+                <div className='containerWithBorder'>
+                <h1 className='coloredLoginTitle'>Add Food</h1>
 
-        <form className="add-form">
-             <div>
-				<label> Categories </label>
-                < select id="categories">   
-                </select>
-		    </div>
-			<div className="form-control">
-				<label> Food Name </label>
-				<input  type="text"
-						placeholder="Enter food name" value={name} onChange={(e) => setName(e.target.value)} />
-			</div>
-			<div className="form-control">
-				<label> Description </label>
-				<input type="text" placeholder="Enter descriptiom" value={description} onChange={(e) => setDescription(e.target.value)}/>
-			</div>
-            <div className="form-control">
-				<label> Price </label>
-				<input type="text" placeholder="Enter price" value={price} onChange={(e) => setPrice(e.target.value)}/>
-			</div>
-			</form>
-      
-				<div>
-				
-		      	<button onClick={(e) => onClickSave(e)} class="btn btn-primary btn-block" type="submit">Create </button>
-				
-				</div>
-      </div>
+                <form className="add-form">
+                    <div>
+                        <label> Categories </label>
+                        < select id="categories">   
+                        </select>
+                    </div>
+                    <div className="form-control">
+                        <label> Food Name </label>
+                        <input  type="text"
+                                placeholder="Enter food name" value={name} onChange={(e) => setName(e.target.value)} />
+                    </div>
+                    <div className="form-control">
+                        <label> Description </label>
+                        <input type="text" placeholder="Enter descriptiom" value={description} onChange={(e) => setDescription(e.target.value)}/>
+                    </div>
+                    <div className="form-control">
+                        <label> Price </label>
+                        <input type="text" placeholder="Enter price" value={price} onChange={(e) => setPrice(e.target.value)}/>
+                    </div>
+                    </form>
+            
+                        <div>
+                        
+                        <button onClick={(e) => onClickSave(e)} class="btn btn-primary btn-block" type="submit">Create </button>
+                        
+                        </div>
+            </div>
       </div>
         
 

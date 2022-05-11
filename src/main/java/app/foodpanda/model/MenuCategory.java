@@ -1,5 +1,5 @@
 package app.foodpanda.model;
-
+import app.foodpanda.dto.FoodDTO;
 import java.util.List;
 
 public class MenuCategory {

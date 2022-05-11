@@ -63,11 +63,11 @@ const LoginAdmin = () => {
 				<input type="password" placeholder="Enter password" value={password} onChange={(e) => setPassword(e.target.value)}/>
 			</div>
 			</form>
-				<div>
+			<div>
 				
 		      	<button onClick={(e) => onClickSave(e)} class="btn btn-primary btn-block" type="submit">Login</button>
 				
-				</div>
+			</div>
       </div>
     )
 };

@@ -1,12 +1,12 @@
 package app.foodpanda.model;
 
-
 import javax.persistence.*;
 import java.util.List;
 
 @Entity
 @Table(name = "food")
 public class Food {
+
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Integer id_food;

@@ -9,7 +9,6 @@ const ClientInitialView = () => {
     const client = state.client
 
 
-
     const onClickFood = async(e) => {
         e.preventDefault()
         console.log(state.client)
@@ -46,24 +45,23 @@ const ClientInitialView = () => {
 
     return(
         <div>
-        <div className = "row">
-        <div style={{color: '#800040', marginLeft : 50, fontSize : 50}}>FoodPanda</div>
-        <button className = "btn" style = {{marginLeft : 1000}} type="submit" id='btn-log-out' onClick={(e) => onLogOutSubmit(e)}>
-            Log out
-        </button>
-        </div>
-        <hr></hr>
-
-        
-        <div className='containerWithBorder centerContainer'>
+            <div className = "row">
+                <div style={{color: '#800040', marginLeft : 50, fontSize : 50}}>FoodPanda</div>
+                <button className = "btn" style = {{marginLeft : 1000}} type="submit" id='btn-log-out' onClick={(e) => onLogOutSubmit(e)}>
+                    Log out
+                </button>
+            </div>
+            <hr></hr>
+            <div className='containerWithBorder centerContainer'>
                 <button  onClick={(e) => onClickFood(e)} 
-                class="btn btn-primary btn-block firstButton" type="submit">
-                    I want food</button>
+                    class="btn btn-primary btn-block firstButton" type="submit">
+                    I want food
+                </button>
                 <button onClick={(e) => onClickViewOrders(e)} 
-                class="btn btn-primary btn-block" type="submit">
-                    My Orders</button>
-        
-        </div>
+                    class="btn btn-primary btn-block" type="submit">
+                    My Orders
+                </button>
+            </div>
         </div>
     
         )

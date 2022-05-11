@@ -101,12 +101,10 @@ const LoginCustomer = () => {
 				<input type="password" placeholder="Enter password" value={password} onChange={(e) => setPassword(e.target.value)}/>
 			</div>
 			</form>
-				<div>
-				
+			<div>
 		      	<button onClick={(e) => onClickSave(e)} class="btn btn-primary btn-block" type="submit">Login</button>
-				  <button onClick={(e) => onClickRegister(e)} class="btn btn-primary btn-block" type="submit">Register</button>
-
-				</div>
+				<button onClick={(e) => onClickRegister(e)} class="btn btn-primary btn-block" type="submit">Register</button>
+			</div>
       </div>
     )
 };

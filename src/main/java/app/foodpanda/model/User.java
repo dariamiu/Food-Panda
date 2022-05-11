@@ -7,6 +7,7 @@ import javax.persistence.*;
 @Table(name ="user")
 @Inheritance(strategy = InheritanceType.JOINED)
 public class User {
+
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Integer id_user;

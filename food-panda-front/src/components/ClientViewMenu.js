@@ -55,8 +55,8 @@ const ClientViewMenu = () =>  {
             <div className = "row">
                  <div style={{color: '#800040', marginLeft : 50, fontSize : 50}}>FoodPanda</div>
                  <button className = "btn" style = {{marginLeft : 900}} type="submit" id='btn-log-out' onClick={(e) => onClickViewCart(e)}>
-            View Cart
-        </button>
+                    View Cart
+                </button>
                  <button className = "btn" style = {{marginLeft : 20}} type="submit" id='btn-log-out' onClick={(e) => onLogOutSubmit(e)}>
                     Log out
                  </button>

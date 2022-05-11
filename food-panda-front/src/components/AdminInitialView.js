@@ -34,9 +34,9 @@ const AdminInitialView = () => {
 
     const onClickCreateRestaurant = async(e) => {
         e.preventDefault()
-        if(restaurant.name != null){
+        if (restaurant.name != null){
             alert("You have already created a restaurant");
-        }else{
+        } else {
              navigate('/admin/create-restaurant', {
             state: {
                 admin : admin
@@ -48,9 +48,9 @@ const AdminInitialView = () => {
 
     const onClickManageMenu = async(e) => {
         e.preventDefault()
-        if(restaurant.name == null){
+        if (restaurant.name == null){
             alert("You should create a restaurant first!");
-        }else {
+         }else {
             navigate('/admin/manage-menu', {
             state: {
                 admin : admin,
@@ -62,9 +62,9 @@ const AdminInitialView = () => {
 
     const onClickViewMenu = async(e) => {
         e.preventDefault()
-        if(restaurant.name == null){
+        if (restaurant.name == null){
             alert("You should create a restaurant first!");
-        }else{
+        } else {
              navigate('/admin/view-menu-admin', {
             state: {
                 restaurant : restaurant
@@ -76,9 +76,9 @@ const AdminInitialView = () => {
 
     const onClickManageOrders = async(e) => {
         e.preventDefault()
-        if(restaurant.name == null){
+        if (restaurant.name == null){
             alert("You should create a restaurant first!");
-        }else{
+        } else {
              navigate('/admin/orders/view', {
             state: {
                 admin : admin,
@@ -88,9 +88,22 @@ const AdminInitialView = () => {
         }
        
     }
+
+    const onClickEmail= async(e) => {
+        e.preventDefault()
+        if (restaurant.name == null){
+            alert("You should create a restaurant first!");
+        } else {
+             navigate('/admin/email', {
+            state: {
+                admin : admin
+            }
+        })
+        }
+       
+    }
     const onLogOutSubmit = (e) => {
         e.preventDefault()
-
         navigate('/', {
         })
     }
@@ -119,7 +132,9 @@ const AdminInitialView = () => {
                 <button onClick={(e) => onClickManageOrders(e)} 
                 class="btn btn-primary btn-block" type="submit">
                     Manage orders</button>
-        
+                <button onClick={(e) => onClickEmail(e)} 
+                class="btn btn-primary btn-block" type="submit">
+                    Email</button>
         </div>
         </div>
     

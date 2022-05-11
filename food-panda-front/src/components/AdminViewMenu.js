@@ -2,12 +2,14 @@ import { useState, useEffect } from 'react'
 import { useLocation } from "react-router-dom"
 import { useNavigate } from "react-router-dom"
 import Category from './Category'
+import ReactToPrint from 'react-to-print';
 
 const AdminViewMenu = () => {
 
     const {state} = useLocation()
     const [menuCategories, setMenuCategories] = useState([])
     const navigate = useNavigate()
+    var componentRef
 
     const fecthMenuCategories = async() => {
         const res = await fetch(`http://localhost:8080/foodpanda/food/view/${state.restaurant.name}`)
@@ -42,8 +44,8 @@ const AdminViewMenu = () => {
             </div>
             <hr></hr>
             <div>
-                <div className = "container-2">
-                    <div>
+                <div  className = "container-2">
+                    <div  ref={(response) => (componentRef = response)}>
                         <h1 style={{marginLeft : 10, color: '#800040'}} className="details">Menu </h1>
                         <br></br>
                         <div >
@@ -54,6 +56,10 @@ const AdminViewMenu = () => {
                     </div>
                 </div>
             </div>
+            <ReactToPrint
+            content={() => componentRef}
+            trigger={() => <button className="btn btn-primary">Print to PDF!</button>}
+          />
       </div>
 
 

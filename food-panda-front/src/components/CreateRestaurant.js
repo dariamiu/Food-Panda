@@ -125,11 +125,11 @@ const CreateRestaurantView = () => {
 
 			</form>
       
-				<div>
+			<div>
 				
 		      	<button onClick={(e) => onClickSave(e)} class="btn btn-primary btn-block" type="submit">Create </button>
 				
-				</div>
+		    </div>
       </div>
       </div>
         

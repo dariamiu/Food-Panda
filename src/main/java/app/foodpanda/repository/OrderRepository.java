@@ -4,7 +4,6 @@ import app.foodpanda.model.Customer;
 import app.foodpanda.model.Order;
 import app.foodpanda.model.Restaurant;
 import org.springframework.data.jpa.repository.Query;
-
 import java.util.List;
 
 public interface OrderRepository extends AbstractRepository<Order> {

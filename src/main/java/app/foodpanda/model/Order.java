@@ -1,9 +1,6 @@
 package app.foodpanda.model;
 
-import org.springframework.web.bind.annotation.CrossOrigin;
-
 import javax.persistence.*;
-import javax.persistence.criteria.CriteriaBuilder;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.List;
